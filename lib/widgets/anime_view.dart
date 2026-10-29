@@ -1,15 +1,9 @@
 import 'package:flutter/material.dart';
 import '../data/dummy_data.dart';
-import '../models/anime.dart';
 import 'anime_card.dart';
 
 class AnimeView extends StatelessWidget {
-  final List<Anime> animeList;
-
-  const AnimeView({
-    super.key,
-    required this.animeList
-  });
+  const AnimeView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +36,9 @@ class AnimeView extends StatelessWidget {
               crossAxisSpacing: constraints.maxWidth * 0.05,
               childAspectRatio: childAspectRatio,
             ),
-            itemCount: animeList.length,
+            itemCount: DummyData.animeList.length,
             itemBuilder: (context, index) {
-              final anime = animeList[index];
+              final anime = DummyData.animeList[index];
               return AnimeCard(
                 id: anime.id,
                 title: anime.title,

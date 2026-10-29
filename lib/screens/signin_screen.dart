@@ -153,11 +153,7 @@ class SignInScreen extends StatelessWidget {
                         child: ElevatedButton(
                           onPressed: () {
                             // TODO: Implement sign in functionality
-                            Navigator.of(context).pushReplacement(
-                              MaterialPageRoute(builder: (context) => const HomeScreen()),
-                            );
-                            context.go('/home');
-
+                            context.go(AppRoutes.home);
 
                           },
                           style: ElevatedButton.styleFrom(
